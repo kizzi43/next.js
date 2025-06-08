@@ -57,7 +57,7 @@ export function PseudoHtmlDiff({
 
   const htmlComponents = useMemo(() => {
     const componentStacks: React.ReactNode[] = []
-    const reactComponentDiffLines = reactOutputComponentDiff!.split('\n')
+    const reactComponentDiffLines = reactOutputComponentDiff.split('\n')
     reactComponentDiffLines.forEach((line, index) => {
       const isDiffLine = line[0] === '+' || line[0] === '-'
       const isHighlightedLine = line[0] === '>'
